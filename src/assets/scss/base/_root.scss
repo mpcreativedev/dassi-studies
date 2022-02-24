@@ -1,0 +1,140 @@
+:root {
+  @each $color, $value in $theme-colors {
+    --#{$variable-prefix}#{$color}: #{$value};
+  }
+
+  --#{$variable-prefix}font-sans-serif: #{inspect($font-family-sans-serif)};
+
+  @if $font-size-root != null {
+    --#{$variable-prefix}root-font-size: #{$font-size-root};
+  }
+
+  --#{$variable-prefix}body-font-family: #{$font-family-base};
+  --#{$variable-prefix}body-font-size: #{$font-size-base};
+  --#{$variable-prefix}body-font-weight: #{$font-weight-base};
+  --#{$variable-prefix}body-line-height: #{$line-height-base};
+  --#{$variable-prefix}body-text-align: #{$body-text-align};
+
+  /**
+   * Theme
+   */
+  --#{$variable-prefix}body-bg: #{$gray-200};
+  --#{$variable-prefix}body-color: #{$gray-900};
+
+  --#{$variable-prefix}brand-name: #{$gray-900};
+  --#{$variable-prefix}brand-caption: #{$gray-600};
+
+  --#{$variable-prefix}sidebar-bg: #{$gray-100};
+  --#{$variable-prefix}sidebar-color: #{$gray-600};
+  --#{$variable-prefix}sidebar-focus: #{rgba($gray-600, 0.1)};
+  --#{$variable-prefix}sidebar-border: #{$gray-300};
+  --#{$variable-prefix}sidebar-active-bg: #{rgba($primary, 0.1)};
+  --#{$variable-prefix}sidebar-active-color: #{$primary};
+  --#{$variable-prefix}sidebar-footer-color: #{$gray-500};
+
+  --#{$variable-prefix}table-odd-bg: #{shift-color($gray-100, 0%)};
+  --#{$variable-prefix}table-even-bg: #{shift-color($gray-100, -60%)};
+  --#{$variable-prefix}table-color: #{$gray-700};
+  --#{$variable-prefix}table-border: 1px solid #{$gray-300};
+  --#{$variable-prefix}table-shadow: 0 0 0 1px #{$gray-300};
+  --#{$variable-prefix}table-header-bg: #{shift-color($gray-200, -40%)};
+  --#{$variable-prefix}table-footer-bg: #{shift-color($gray-200, -40%)};
+
+  --#{$variable-prefix}form-bg: #{$gray-100};
+  --#{$variable-prefix}form-border: 1px solid #{$gray-300};
+  --#{$variable-prefix}form-group-bg: #{shift-color($gray-200, -40%)};
+
+  --#{$variable-prefix}viewer-bg: #{$gray-100};
+  --#{$variable-prefix}viewer-border: 1px solid #{$gray-300};
+  --#{$variable-prefix}viewer-header-bg: #{shift-color($gray-200, -40%)};
+
+  --#{$variable-prefix}modal-bg: #{rgba($gray-600, 0.75)};
+  --#{$variable-prefix}modal-border: 1px solid #{$gray-300};
+  --#{$variable-prefix}modal-shadow: 0 0 2rem #{rgba($black, 0.1)};
+  --#{$variable-prefix}modal-body-bg: #{$white};
+  --#{$variable-prefix}modal-header-bg: #{shift-color($gray-200, -40%)};
+  --#{$variable-prefix}modal-footer-bg: #{shift-color($gray-200, -40%)};
+
+  --#{$variable-prefix}dialog-body-bg: #{$white};
+  --#{$variable-prefix}dialog-border: 1px solid #{$gray-300};
+  --#{$variable-prefix}dialog-footer-bg: #{shift-color($gray-200, -40%)};
+
+  --#{$variable-prefix}toolbar-bg: #{$gray-100};
+  --#{$variable-prefix}toolbar-color: #{$gray-600};
+  --#{$variable-prefix}toolbar-focus: #{rgba($gray-600, 0.1)};
+  --#{$variable-prefix}toolbar-border: 1px solid #{$gray-300};
+  --#{$variable-prefix}toolbar-shadow: #{rgba($black, 0.2)};
+
+  --#{$variable-prefix}form-input-bg: #{$white};
+  --#{$variable-prefix}form-input-color: #{$gray-800};
+  --#{$variable-prefix}form-input-border: 1px solid #{$gray-300};
+  --#{$variable-prefix}form-input-focus: 0 0 0 4px #{rgba($primary, 0.25)};
+  --#{$variable-prefix}form-input-focus-border: 1px solid #{$primary};
+
+  --#{$variable-prefix}button-bg: #{shift-color($gray-100, -40%)};
+  --#{$variable-prefix}button-color: #{$gray-600};
+  --#{$variable-prefix}button-hover: #{shift-color($gray-100, -80%)};
+  --#{$variable-prefix}button-border: 1px solid #{$gray-400};
+  --#{$variable-prefix}button-focus: 0 0 0 4px #{rgba($gray-400, 0.4)};
+
+  &.dark {
+    --#{$variable-prefix}body-bg: #{shift-color($gray-900, 10%)};
+    --#{$variable-prefix}body-color: #{$gray-100};
+
+    --#{$variable-prefix}brand-name: #{$gray-100};
+    --#{$variable-prefix}brand-caption: #{$gray-600};
+
+    --#{$variable-prefix}sidebar-bg: #{$gray-900};
+    --#{$variable-prefix}sidebar-color: #{$gray-500};
+    --#{$variable-prefix}sidebar-focus: #{rgba($gray-500, 0.05)};
+    --#{$variable-prefix}sidebar-border: #{shift-color($gray-800, 20%)};
+    --#{$variable-prefix}sidebar-active-bg: #{rgba(shift-color($primary, -20%), 0.1)};
+    --#{$variable-prefix}sidebar-active-color: #{shift-color($primary, -20%)};
+    --#{$variable-prefix}sidebar-footer-color: #{$gray-600};
+
+    --#{$variable-prefix}table-odd-bg: #{$gray-900};
+    --#{$variable-prefix}table-even-bg: #{shift-color($gray-900, 15%)};
+    --#{$variable-prefix}table-color: #{$gray-300};
+    --#{$variable-prefix}table-border: 1px solid #{shift-color($gray-800, 20%)};
+    --#{$variable-prefix}table-shadow: 0 0 0 1px #{shift-color($gray-800, 20%)};
+    --#{$variable-prefix}table-header-bg: #{shift-color($gray-900, 15%)};
+    --#{$variable-prefix}table-footer-bg: #{shift-color($gray-900, 15%)};
+
+    --#{$variable-prefix}form-bg: #{$gray-900};
+    --#{$variable-prefix}form-border: 1px solid #{shift-color($gray-800, 20%)};
+    --#{$variable-prefix}form-group-bg: #{shift-color($gray-900, 15%)};
+
+    --#{$variable-prefix}viewer-bg: #{$gray-900};
+    --#{$variable-prefix}viewer-border: 1px solid #{shift-color($gray-800, 20%)};
+    --#{$variable-prefix}viewer-header-bg: #{shift-color($gray-900, 15%)};
+
+    --#{$variable-prefix}modal-bg: #{rgba($gray-800, 0.75)};
+    --#{$variable-prefix}modal-border: 1px solid #{shift-color($gray-800, 20%)};
+    --#{$variable-prefix}modal-shadow: 0 0 2rem #{rgba($black, 0.2)};
+    --#{$variable-prefix}modal-body-bg: #{$gray-900};
+    --#{$variable-prefix}modal-header-bg: #{shift-color($gray-900, 15%)};
+    --#{$variable-prefix}modal-footer-bg: #{shift-color($gray-900, 15%)};
+
+    --#{$variable-prefix}dialog-body-bg: #{$gray-900};
+    --#{$variable-prefix}dialog-border: 1px solid #{shift-color($gray-800, 20%)};
+    --#{$variable-prefix}dialog-footer-bg: #{shift-color($gray-900, 15%)};
+
+    --#{$variable-prefix}toolbar-bg: #{$gray-900};
+    --#{$variable-prefix}toolbar-color: #{$gray-500};
+    --#{$variable-prefix}toolbar-focus: #{rgba($gray-500, 0.05)};
+    --#{$variable-prefix}toolbar-border: 1px solid #{shift-color($gray-800, 20%)};
+    --#{$variable-prefix}toolbar-shadow: #{rgba($black, 0.2)};
+
+    --#{$variable-prefix}form-input-bg: #{$gray-900};
+    --#{$variable-prefix}form-input-color: #{$gray-200};
+    --#{$variable-prefix}form-input-border: 1px solid #{$gray-800};
+    --#{$variable-prefix}form-input-focus: 0 0 0 4px #{rgba($primary, 0.4)};
+    --#{$variable-prefix}form-input-focus-border: 1px solid #{$primary};
+
+    --#{$variable-prefix}button-bg: #{$gray-900};
+    --#{$variable-prefix}button-color: #{$gray-500};
+    --#{$variable-prefix}button-hover: #{shift-color($gray-900, -5%)};
+    --#{$variable-prefix}button-border: 1px solid #{$gray-700};
+    --#{$variable-prefix}button-focus: 0 0 0 4px #{rgba($gray-700, 0.4)};
+  }
+}

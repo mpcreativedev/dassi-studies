@@ -1,0 +1,68 @@
+@import 'bourbon';
+@import 'bootstrap/scss/mixins';
+
+@mixin media($breakpoint) {
+  @include media-breakpoint-up($breakpoint) {
+    @content;
+  }
+}
+
+@mixin make-grid-columns(
+  $columns: $grid-columns,
+  $breakpoints: $grid-breakpoints
+) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $prefix: breakpoint-prefix($breakpoint, $breakpoints);
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      .#{$prefix}col {
+        flex: 1 0 0%; // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+      }
+
+      .#{$prefix}col-auto {
+        @include make-col-auto();
+      }
+
+      @if $columns > 0 {
+        @for $i from 1 through $columns {
+          .#{$prefix}col-#{$i} {
+            @include make-col($i, $columns);
+          }
+        }
+
+        // `$columns - 1` because offsetting by the width of an entire row isn't possible
+        @for $i from 0 through ($columns - 1) {
+          @if not($prefix == '' and $i == 0) {
+            // Avoid emitting useless .offset-0
+            .#{$prefix}offset-#{$i} {
+              @include make-col-offset($i, $columns);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin theme-variant($color) {
+  background-color: $color;
+  border-color: shift-color($color, 10%);
+  color: $white;
+}
+
+@mixin button-variant($color) {
+  @include theme-variant($color);
+
+  &:hover {
+    background-color: shift-color($color, 15%);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 4px rgba($color, 0.4);
+  }
+}
+
+@mixin margin-x($value) {
+  margin-left: $value;
+  margin-right: $value;
+}

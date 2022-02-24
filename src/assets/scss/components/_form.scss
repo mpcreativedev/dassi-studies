@@ -1,0 +1,27 @@
+.form-group {
+  margin-bottom: 0.6rem;
+}
+
+.control-label {
+  font-size: 1.3rem;
+  padding-left: 0.3rem;
+  position: relative;
+  display: block;
+
+  &-title {
+    margin-bottom: 1rem;
+
+    &::after {
+      content: '';
+      @include size(auto, 1px);
+      @include position(absolute, null 0 -0.2rem 0);
+      background-color: #ced4da;
+    }
+  }
+}
+
+.help-block {
+  font-size: 1.2rem;
+  margin-left: 0.3rem;
+  opacity: 0.6;
+}

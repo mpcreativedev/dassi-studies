@@ -1,0 +1,25 @@
+.field-string {
+  @include size(100%, auto);
+  flex-direction: column;
+  position: relative;
+  display: flex;
+
+  .form-control,
+  .DayPickerInput input {
+    @include size(100%, auto);
+    color: var(--#{$variable-prefix}form-input-color);
+    border: var(--#{$variable-prefix}form-input-border);
+    background-color: var(--#{$variable-prefix}form-input-bg);
+    transition: box-shadow 0.25s $ease-out-cubic;
+    border-radius: $border-radius;
+    padding: 0.8rem 1rem;
+    appearance: none;
+    outline: none;
+    flex-grow: 1;
+
+    &:focus {
+      box-shadow: var(--#{$variable-prefix}form-input-focus);
+      border: var(--#{$variable-prefix}form-input-focus-border);
+    }
+  }
+}

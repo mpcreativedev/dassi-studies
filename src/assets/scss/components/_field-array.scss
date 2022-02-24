@@ -1,0 +1,59 @@
+.field-array {
+  &-group {
+    border: var(--#{$variable-prefix}form-input-border);
+    background-color: var(--#{$variable-prefix}form-group-bg);
+    padding: $grid-gutter-width-sm;
+    border-radius: $border-radius;
+  }
+
+  &-item {
+    @include make-row($grid-gutter-width-sm);
+    align-items: flex-end;
+    margin-bottom: 0.6rem;
+
+    @include media(md) {
+      --#{$variable-prefix}gutter-x: #{$grid-gutter-width-md};
+    }
+
+    @include media(lg) {
+      --#{$variable-prefix}gutter-x: #{$grid-gutter-width-lg};
+    }
+
+    > * {
+      @include make-col-ready();
+    }
+
+    ~ .btn-add {
+      margin-top: 0.6rem;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 0;
+
+    ~ .field-object,
+    ~ .field-array {
+      margin-top: 0.6rem;
+    }
+  }
+
+  .btn-add {
+    @include size(100%, auto);
+    justify-content: center;
+
+    .iconify--mdi {
+      @include size(1.8rem);
+    }
+  }
+
+  .btn-del {
+    @include size(100%, 4rem);
+    justify-content: center;
+    margin-bottom: 0.1rem;
+    margin-top: 1.2rem;
+
+    @include media(lg) {
+      margin-top: 0;
+    }
+  }
+}

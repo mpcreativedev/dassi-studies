@@ -1,0 +1,9 @@
+@import 'bootstrap/scss/functions';
+
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+@function breakpoint-prefix($name, $breakpoints: $grid-breakpoints) {
+  @return if(breakpoint-min($name, $breakpoints) == null, '', '#{$name}\\:');
+}

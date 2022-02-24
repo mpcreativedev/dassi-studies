@@ -1,0 +1,9 @@
+@each $variant, $color in $theme-colors {
+  .bg-#{$variant} {
+    background-color: $color;
+  }
+
+  .text-#{$variant} {
+    color: $color;
+  }
+}

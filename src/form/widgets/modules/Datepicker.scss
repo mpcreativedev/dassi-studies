@@ -1,0 +1,40 @@
+.DayPicker {
+  font-size: 1.4rem;
+  width: 100%;
+}
+
+.DayPicker-wrapper {
+  width: 100%;
+}
+
+.DayPicker-Month {
+  flex-grow: 1;
+}
+
+.DayPicker-Day {
+  border-radius: $border-radius;
+}
+
+.DayPicker-Day,
+.DayPicker-WeekNumber {
+  padding: 1rem 1.2rem;
+}
+
+.DayPicker-Day--today {
+  background-color: rgba($primary, 0.1);
+  color: $primary;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+  background-color: $primary;
+  color: $white;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside):hover {
+  background-color: shift-color($primary, 15%);
+}
+
+.DayPicker:not(.DayPicker--interactionDisabled)
+  .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover {
+  background-color: rgba($primary, 0.1);
+}

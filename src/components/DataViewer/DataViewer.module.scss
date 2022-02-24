@@ -1,0 +1,15 @@
+.data-viewer {
+  position: relative;
+  border: var(--#{$variable-prefix}viewer-border);
+  border-radius: $border-radius;
+
+  &__body {
+    background-color: var(--#{$variable-prefix}viewer-bg);
+    border-radius: 0 0 $border-radius $border-radius;
+    font-family: monospace;
+    padding: 1.2rem 1.6rem;
+    font-size: 1.2rem;
+    white-space: pre;
+    overflow: hidden;
+  }
+}

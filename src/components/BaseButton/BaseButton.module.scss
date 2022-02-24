@@ -1,0 +1,54 @@
+.btn {
+  color: var(--#{$variable-prefix}button-color);
+  background-color: var(--#{$variable-prefix}button-bg);
+  border: var(--#{$variable-prefix}button-border);
+  transition: background-color 0.25s $ease-out-cubic, box-shadow 0.25s $ease-out-cubic;
+  font-weight: $font-weight-medium;
+  border-radius: $border-radius;
+  padding: 0.8rem 1.8rem;
+  display: inline-flex;
+  align-items: center;
+  appearance: none;
+  outline: none;
+
+  &:focus {
+    box-shadow: var(--#{$variable-prefix}button-focus);
+  }
+
+  &:hover {
+    background-color: var(--#{$variable-prefix}button-hover);
+  }
+
+  &--primary {
+    @include button-variant($primary);
+  }
+
+  &--secondary {
+    @include button-variant($secondary);
+  }
+
+  &--success {
+    @include button-variant($success);
+  }
+
+  &--warning {
+    @include button-variant($warning);
+  }
+
+  &--danger {
+    @include button-variant($danger);
+  }
+
+  &__icon {
+    @include size(1.6rem);
+    margin: 0 -0.8rem;
+
+    ~ .btn__label {
+      margin-left: 1.8rem;
+    }
+  }
+
+  &__label {
+    font-size: 1.4rem;
+  }
+}

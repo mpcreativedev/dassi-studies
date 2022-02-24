@@ -1,0 +1,197 @@
+{
+  "study_titles": {
+    "items": {
+      "study_title": {
+        "classNames": "col-12 lg:col-10"
+      },
+      "language": {
+        "classNames": "col-12 lg:col-2"
+      }
+    },
+    "add": "Add Study Title"
+  },
+  "study_archive_identifiers": {
+    "items": {
+      "identifier": {
+        "classNames": "col-12 lg:col-4"
+      },
+      "agency": {
+        "classNames": "col-12 lg:col-4"
+      },
+      "language": {
+        "classNames": "col-12 lg:col-4"
+      }
+    },
+    "add": "Add Study Archive Identifier"
+  },
+  "study_pid": {
+    "identifier": {
+      "classNames": "col-12 lg:col-6"
+    },
+    "agency": {
+      "classNames": "col-12 lg:col-6"
+    }
+  },
+  "principal_investigators": {
+    "items": {
+      "type": {
+        "classNames": "col-12 lg:col-6"
+      },
+      "id": {
+        "classNames": "col-12 lg:col-6"
+      }
+    },
+    "add": "Add Investigator"
+  },
+  "other_contributor": {
+    "items": {
+      "type": {
+        "classNames": "col-12 lg:col-6"
+      },
+      "id": {
+        "classNames": "col-12 lg:col-6"
+      },
+      "role": {
+        "vocabulary": {
+          "classNames": "col-12 lg:col-4"
+        },
+        "agency": {
+          "classNames": "col-12 lg:col-4"
+        },
+        "code": {
+          "classNames": "col-12 lg:col-4"
+        },
+        "values": {
+          "items": {
+            "value": {
+              "classNames": "col-12 lg:col-4"
+            },
+            "language": {
+              "classNames": "col-12 lg:col-2"
+            },
+            "uri": {
+              "classNames": "col-12 lg:col-6"
+            }
+          },
+          "add": "Add Role Value"
+        }
+      }
+    },
+    "add": "Add Contributor"
+  },
+  "distribution_date": {
+    "classNames": "col-12"
+  },
+  "study_groups": {
+    "items": {
+      "id": {
+        "classNames": "col-12"
+      }
+    },
+    "add": "Add Study Group"
+  },
+  "version": {
+    "number": {
+      "classNames": "col-12 lg:col-8"
+    },
+    "date": {
+      "classNames": "col-12 lg:col-4",
+      "ui:widget": "datepicker"
+    },
+    "notes": {
+      "items": {
+        "note": {
+          "classNames": "col-12 lg:col-10"
+        },
+        "language": {
+          "classNames": "col-12 lg:col-2"
+        }
+      },
+      "add": "Add Note"
+    }
+  },
+  "keywords": {
+    "items": {
+      "vocabulary": {
+        "classNames": "col-12 lg:col-4"
+      },
+      "agency": {
+        "classNames": "col-12 lg:col-4"
+      },
+      "code": {
+        "classNames": "col-12 lg:col-4"
+      },
+      "values": {
+        "items": {
+          "value": {
+            "classNames": "col-12 lg:col-4"
+          },
+          "language": {
+            "classNames": "col-12 lg:col-2"
+          },
+          "uri": {
+            "classNames": "col-12 lg:col-6"
+          }
+        },
+        "add": "Add Keyword Value"
+      }
+    },
+    "add": "Add keyword"
+  },
+  "topic_classifications": {
+    "items": {
+      "vocabulary": {
+        "classNames": "col-12 lg:col-4"
+      },
+      "agency": {
+        "classNames": "col-12 lg:col-4"
+      },
+      "code": {
+        "classNames": "col-12 lg:col-4"
+      },
+      "values": {
+        "items": {
+          "value": {
+            "classNames": "col-12 lg:col-4"
+          },
+          "language": {
+            "classNames": "col-12 lg:col-2"
+          },
+          "uri": {
+            "classNames": "col-12 lg:col-6"
+          }
+        },
+        "add": "Add Topic Classification Value"
+      }
+    },
+    "add": "Add Topic Classification"
+  },
+  "nations": {
+    "items": {
+      "vocabulary": {
+        "classNames": "col-12 lg:col-4"
+      },
+      "agency": {
+        "classNames": "col-12 lg:col-4"
+      },
+      "code": {
+        "classNames": "col-12 lg:col-4"
+      },
+      "values": {
+        "items": {
+          "value": {
+            "classNames": "col-12 lg:col-4"
+          },
+          "language": {
+            "classNames": "col-12 lg:col-2"
+          },
+          "uri": {
+            "classNames": "col-12 lg:col-6"
+          }
+        },
+        "add": "Add Nation Value"
+      }
+    },
+    "add": "Add Nation"
+  }
+}

@@ -1,0 +1,13 @@
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  @include size(100%);
+}
+
+body {
+  @include size(100%);
+}
+
+#root {
+  position: static;
+  padding: 2rem 0 8rem;
+}

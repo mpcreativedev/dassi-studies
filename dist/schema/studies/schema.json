@@ -1,0 +1,246 @@
+{
+  "type": "object",
+  "title": "Studies",
+  "required": [],
+  "properties": {
+    "study_titles": {
+      "type": "array",
+      "title": "Study Titles",
+      "items": {
+        "$ref": "#/definitions/study_title"
+      }
+    },
+    "study_archive_identifiers": {
+      "type": "array",
+      "title": "Study Archive Identifiers",
+      "items": {
+        "$ref": "#/definitions/study_archive_identifier"
+      }
+    },
+    "study_pid": {
+      "type": "object",
+      "title": "Study Pid",
+      "properties": {
+        "identifier": {
+          "type": "string",
+          "title": "Identifier"
+        },
+        "agency": {
+          "type": "string",
+          "title": "Agency"
+        }
+      }
+    },
+    "principal_investigators": {
+      "type": "array",
+      "title": "Principal Investigators",
+      "items": {
+        "$ref": "#/definitions/principal_investigator"
+      }
+    },
+    "other_contributor": {
+      "type": "array",
+      "title": "Other Contributors",
+      "items": {
+        "$ref": "#/definitions/other_contributor"
+      }
+    },
+    "distribution_date": {
+      "type": "string",
+      "title": "Distribution Date",
+      "format": "datepicker"
+    },
+    "study_groups": {
+      "type": "array",
+      "title": "Study Groups",
+      "items": {
+        "$ref": "#/definitions/study_group"
+      }
+    },
+    "version": {
+      "type": "object",
+      "title": "Version",
+      "properties": {
+        "number": {
+          "type": "string",
+          "title": "Number"
+        },
+        "date": {
+          "type": "string",
+          "title": "Date",
+          "format": "date"
+        },
+        "notes": {
+          "type": "array",
+          "title": "Notes",
+          "items": {
+            "$ref": "#/definitions/version_note"
+          }
+        }
+      }
+    },
+    "keywords": {
+      "type": "array",
+      "title": "Keywords",
+      "items": {
+        "$ref": "#/definitions/vocabulary"
+      }
+    },
+    "topic_classifications": {
+      "title": "Topic Classifications",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/vocabulary"
+      }
+    },
+    "nations": {
+      "type": "array",
+      "title": "Nations",
+      "items": {
+        "$ref": "#/definitions/vocabulary"
+      }
+    }
+  },
+  "definitions": {
+    "study_title": {
+      "type": "object",
+      "properties": {
+        "study_title": {
+          "type": "string",
+          "title": "Study Title",
+          "default": ""
+        },
+        "language": {
+          "type": "string",
+          "title": "Language",
+          "default": ""
+        }
+      }
+    },
+    "study_archive_identifier": {
+      "type": "object",
+      "properties": {
+        "identifier": {
+          "type": "string",
+          "title": "Identifier",
+          "default": ""
+        },
+        "agency": {
+          "type": "string",
+          "title": "Agency",
+          "default": ""
+        },
+        "language": {
+          "type": "string",
+          "title": "Language",
+          "default": ""
+        }
+      }
+    },
+    "principal_investigator": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "title": "Type",
+          "default": ""
+        },
+        "id": {
+          "type": "string",
+          "title": "Id",
+          "default": ""
+        }
+      }
+    },
+    "other_contributor": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "title": "Type",
+          "default": ""
+        },
+        "id": {
+          "type": "string",
+          "title": "Id",
+          "default": ""
+        },
+        "role": {
+          "$ref": "#/definitions/vocabulary"
+        }
+      }
+    },
+    "study_group": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "Id",
+          "default": ""
+        }
+      }
+    },
+    "version_note": {
+      "type": "object",
+      "properties": {
+        "note": {
+          "type": "string",
+          "title": "Note",
+          "default": ""
+        },
+        "language": {
+          "type": "string",
+          "title": "Language",
+          "default": ""
+        }
+      }
+    },
+    "vocabulary": {
+      "type": "object",
+      "properties": {
+        "vocabulary": {
+          "type": "string",
+          "title": "Vocabulary",
+          "default": ""
+        },
+        "agency": {
+          "type": "string",
+          "title": "Agency",
+          "default": ""
+        },
+        "code": {
+          "type": "string",
+          "title": "Code",
+          "default": ""
+        },
+        "values": {
+          "type": "array",
+          "title": "Values",
+          "items": {
+            "$ref": "#/definitions/vocabulary_value"
+          }
+        }
+      }
+    },
+    "vocabulary_value": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "title": "Value",
+          "default": ""
+        },
+        "language": {
+          "type": "string",
+          "title": "Language",
+          "default": ""
+        },
+        "uri": {
+          "type": "string",
+          "title": "URI",
+          "default": ""
+        }
+      }
+    }
+  }
+}

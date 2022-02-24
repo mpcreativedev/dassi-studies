@@ -1,0 +1,40 @@
+{
+  "first_name": {
+    "classNames": "col-12 lg:col-6"
+  },
+  "last_name": {
+    "classNames": "col-12 lg:col-6"
+  }
+  ,
+  "email": {
+    "classNames": "col-12 lg:col-6"
+  },
+  "uri": {
+    "classNames": "col-12 lg:col-6"
+  },
+  "affiliations": {
+    "items": {
+      "name": {
+        "classNames": "col-12 lg:col-10"
+      },
+      "language": {
+        "classNames": "col-12 lg:col-2"
+      }
+    },
+    "add": "Add Affiliation"
+  },
+  "identifiers": {
+    "items": {
+      "value": {
+        "classNames": "col-12 lg:col-4"
+      },
+      "scheme": {
+        "classNames": "col-12 lg:col-2"
+      },
+      "uri": {
+        "classNames": "col-12 lg:col-6"
+      }
+    },
+    "add": "Add Identifier"
+  }
+}

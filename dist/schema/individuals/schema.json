@@ -1,0 +1,77 @@
+{
+  "title": "Individuals",
+  "type": "object",
+  "required": [],
+  "properties": {
+    "first_name": {
+      "type": "string",
+      "title": "First Name"
+    },
+    "last_name": {
+      "type": "string",
+      "title": "Last Name"
+    },
+    "email": {
+      "type": "string",
+      "title": "Email",
+      "format": "email"
+    },
+    "uri": {
+      "type": "string",
+      "title": "URI",
+      "format": "uri"
+    },
+    "affiliations": {
+      "type": "array",
+      "title": "Affiliations",
+      "items": {
+        "$ref": "#/definitions/affiliation"
+      }
+    },
+    "identifiers": {
+      "type": "array",
+      "title": "Identifiers",
+      "items": {
+        "$ref": "#/definitions/identifier"
+      }
+    }
+  },
+  "definitions": {
+    "affiliation": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "Name",
+          "default": ""
+        },
+        "language": {
+          "type": "string",
+          "title": "Language",
+          "default": ""
+        }
+      }
+    },
+    "identifier": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "title": "Value",
+          "default": ""
+        },
+        "scheme": {
+          "type": "string",
+          "title": "Scheme",
+          "default": ""
+        },
+        "uri": {
+          "type": "string",
+          "title": "URI",
+          "format": "uri",
+          "default": ""
+        }
+      }
+    }
+  }
+}

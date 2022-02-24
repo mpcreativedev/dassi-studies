@@ -1,25 +1,20 @@
-import { Outlet, Link } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
+import Sidebar from '@/components/Sidebar/Sidebar'
 
 const AppLayout: React.FC = () => {
   return (
-    <>
-      <header>
-        <ul>
-          <li>
-            <Link to="/">Dashboard</Link>
-          </li>
-          <li>
-            <Link to="/studies">Studies</Link>
-          </li>
-          <li>
-            <Link to="/individuals">Individuals</Link>
-          </li>
-        </ul>
-      </header>
-      <section>
-        <Outlet />
-      </section>
-    </>
+    <div className="container">
+      <div className="row">
+        <div className="col-12 md:col-2">
+          <Sidebar />
+        </div>
+        <div className="col-12 md:col-10">
+          <section>
+            <Outlet />
+          </section>
+        </div>
+      </div>
+    </div>
   )
 }
 

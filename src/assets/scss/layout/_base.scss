@@ -5,9 +5,14 @@ html {
 
 body {
   @include size(100%);
+  overflow-y: scroll;
 }
 
 #root {
   position: static;
   padding: 2rem 0 8rem;
+
+  @include media(md) {
+    padding: 4rem 0 8rem;
+  }
 }

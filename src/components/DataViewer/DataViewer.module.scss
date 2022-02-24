@@ -2,6 +2,11 @@
   position: relative;
   border: var(--#{$variable-prefix}viewer-border);
   border-radius: $border-radius;
+  margin-top: 3.2rem;
+
+  @include media(md) {
+    margin-top: 0;
+  }
 
   &__body {
     background-color: var(--#{$variable-prefix}viewer-bg);

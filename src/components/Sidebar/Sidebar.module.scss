@@ -1,0 +1,23 @@
+.aside {
+  position: relative;
+  margin-bottom: 1.6rem;
+
+  &__nav {
+    line-height: 2;
+    flex-direction: row;
+    display: flex;
+
+    @include media(md) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    margin-right: 1.6rem;
+
+    a {
+      text-decoration: none;
+      font-weight: $font-weight-medium;
+    }
+  }
+}

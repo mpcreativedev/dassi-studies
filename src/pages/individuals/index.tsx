@@ -29,28 +29,24 @@ const Individuals: React.FC = () => {
   }, [])
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-12 md:col-8">
-          {!isFetched ? (
-            <div>Fetching...</div>
-          ) : (
-            <>
-              <h1>Individuals</h1>
-              <FormData
-                schema={schema}
-                uiSchema={uiSchema}
-                formData={formData}
-                onChange={onFormUpdate}
-                onSubmit={onFormUpdate}
-                onError={onFormUpdate}
-              />
-            </>
-          )}
-        </div>
-        <div className="col-12 md:col-4">
-          <DataViewer formData={formData} />
-        </div>
+    <div className="row">
+      <div className="col-12 md:col-8">
+        <h1>Individuals</h1>
+        {!isFetched ? (
+          <div>Fetching...</div>
+        ) : (
+          <FormData
+            schema={schema}
+            uiSchema={uiSchema}
+            formData={formData}
+            onChange={onFormUpdate}
+            onSubmit={onFormUpdate}
+            onError={onFormUpdate}
+          />
+        )}
+      </div>
+      <div className="col-12 md:col-4">
+        <DataViewer formData={formData} />
       </div>
     </div>
   )

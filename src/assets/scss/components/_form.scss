@@ -25,3 +25,8 @@
   margin-left: 0.3rem;
   opacity: 0.6;
 }
+
+.btn-save {
+  @include size(100%, auto);
+  justify-content: center;
+}

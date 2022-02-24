@@ -1,6 +1,6 @@
 .container {
   --#{$variable-prefix}gutter-x: #{$grid-gutter-width-sm};
-  max-width: $grid-container-max-width;
+  //max-width: $grid-container-max-width;
   @include make-container();
 
   @include media(md) {

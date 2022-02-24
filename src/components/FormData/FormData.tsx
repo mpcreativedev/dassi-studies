@@ -18,7 +18,7 @@ const FormData: React.FC<FormProps<unknown>> = (props: FormProps<unknown>) => {
       ObjectFieldTemplate={ObjectFieldTemplate}
     >
       <div>
-        <BaseButton type="submit" label="Submit" variant="primary" />
+        <BaseButton type="submit" label="Submit" variant="primary" className="btn-save" />
       </div>
     </Form>
   )

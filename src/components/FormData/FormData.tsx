@@ -1,7 +1,7 @@
 import { FormProps, withTheme } from '@rjsf/core'
-import { Datepicker } from '@/form/widgets'
 import { FieldTemplate, ObjectFieldTemplate, ArrayFieldTemplate } from '@/form/templates'
 import BaseButton from '@/components/BaseButton/BaseButton'
+import Datepicker from '@/form/widgets/Datepicker/Datepicker'
 
 const Form = withTheme({
   widgets: {
